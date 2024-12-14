@@ -14,6 +14,8 @@ local function installation()
     run("mkdir","pass/")
     run("cd","/.sec/pass/")
     run("wget","https://raw.githubusercontent.com/kizYTB/Sec-system-cc/refs/heads/main/.sec/pass/data.txt")
+
+    os.reboot()
 end
 
 if fs.exists("/startup.lua") then

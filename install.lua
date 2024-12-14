@@ -3,12 +3,6 @@ local run = shell.run
 term.clear()
 term.setCursorPos(1,1)
 
-if fs.exists("/startup.lua") then
-    DELETESTART()
-else
-    install()
-end
-
 local function install()
     run("cd","/")
     run("wget","https://raw.githubusercontent.com/kizYTB/Sec-system-cc/refs/heads/main/startup.lua")
@@ -21,6 +15,12 @@ local function install()
     run("mkdir","pass/")
     run("cd","/.sec/pass/")
     run("wget","https://raw.githubusercontent.com/kizYTB/Sec-system-cc/refs/heads/main/.sec/pass/data.txt")
+end
+
+if fs.exists("/startup.lua") then
+    DELETESTART()
+else
+    install()
 end
 
 local function DELETESTART()

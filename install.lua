@@ -19,8 +19,22 @@ textutils.slowPrint("Deleting boot files from the os, bootloader.",15)
 
 run("rm","/startup.lua")
 
+sleep(2)
+
+install()
+
 end
 
 local function install()
-    textutils.slowPrint("supression des fichier de demarage de L'os, bootloader ",15)
+    run("cd","/")
+    run("wget","https://raw.githubusercontent.com/kizYTB/Sec-system-cc/refs/heads/main/startup.lua")
+    run("wget","https://raw.githubusercontent.com/kizYTB/Sec-system-cc/refs/heads/main/.settings")
+    run("mkdir",".sec")
+    run("cd","/.sec")
+    run("wget","https://raw.githubusercontent.com/kizYTB/Sec-system-cc/refs/heads/main/.sec/resetpass.lua")
+    run("wget","https://raw.githubusercontent.com/kizYTB/Sec-system-cc/refs/heads/main/.sec/pass.lua")
+    run("wget","https://raw.githubusercontent.com/kizYTB/Sec-system-cc/refs/heads/main/.sec/bootmanager.lua")
+    run("mkdir","pass/")
+    run("cd","/.sec/pass/")
+    run("wget","https://raw.githubusercontent.com/kizYTB/Sec-system-cc/refs/heads/main/.sec/pass/data.txt")
 end

@@ -3,6 +3,8 @@ local passwordFile = "/.sec/pass/data.txt"
 
 os.pullEvent = os.pullEventRaw
 
+shell.setAlias("boot","/.sec/bootmanager.lua")
+
 local function br()
    print() 
 end
